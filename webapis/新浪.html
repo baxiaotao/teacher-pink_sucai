@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>新浪</title>
+    <style>
+        div {
+            width: 50px;
+            height: 30px;
+            margin: 0 auto;
+            border: 1px solid #999;
+            text-align: center;
+            line-height: 30px;
+        }
+        
+        ul {
+            list-style: none;
+            display: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            width: 50px;
+            height: 30px;
+            border: 1px solid #999;
+        }
+        
+        li:hover {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="e">
+        <a>微博</a>
+        <ul>
+            <li>私信</li>
+            <li>评论</li>
+            <li>@我</li>
+        </ul>
+    </div>
+
+    <script>
+        var a = document.querySelector('.e');
+        var ul = document.querySelector('ul');
+        a.onmousemove = function() {
+            ul.style.display = 'block';
+        }
+        a.onmouseout = function() {
+            ul.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

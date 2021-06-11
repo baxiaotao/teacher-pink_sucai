@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>button</title>
+    <link rel="stylesheet" href="button.css">
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1">
+            <img src="bodadianhua.png">
+        </div>
+        <div class="box1">
+            <img src="saoma.png">
+        </div>
+        <div class="box1">
+            <img src="shangchengdingdan.png">
+        </div>
+        <div class="box1">
+            <img src="shouhuodizhi.png">
+        </div>
+        <div class="box1">
+            <img src="shouji.png">
+        </div>
+        <div class="box1">
+            <img src="jinru.png">
+        </div>
+    </div>
+    <script>
+        var box1 = document.querySelectorAll('.box1');
+        for (var i = 0; i < box1.length; i++) {
+            box1[i].onclick = function() {
+                if (this.className == 'box1') {
+                    this.className = 'box1 box3';
+                } else {
+                    this.className = 'box1';
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

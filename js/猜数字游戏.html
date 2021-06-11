@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>猜猜看</title>
+    <script>
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        var random = getRandom(1, 50);
+
+        for (var i = 0; i < 10; i++) {
+            var num = prompt('你来猜？输入1~50之间的一个数，只有十次机会哦~');
+            if (num > random) {
+                alert('你猜大了呀！');
+            } else if (num < random) {
+                alert('你猜小了哦~');
+            } else {
+                alert('恭喜你呀小天才，猜对了哦~');
+                break;
+            }
+
+        }
+        if (num * 1 !== random) {
+            alert('啊哦，很遗憾没猜对')
+        }
+    </script>
+</head>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function convertToBinary(num) {
+            num = num.toString(2);
+            var len = num.length;
+            if (len < 8) {
+                var s = '00000000';
+                var s2 = s.slice(0, 8 - len)
+                num = s2 + num
+            }
+            return num
+        }
+        console.log(convertToBinary(65));
+    </script>
+</body>
+
+</html>

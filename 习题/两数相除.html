@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /**
+         * @param {number} dividend
+         * @param {number} divisor
+         * @return {number}
+         */
+        var divide = function(dividend, divisor) {
+            var n = 0;
+            var fn = function(dividend, divisor) {
+                if (Math.abs(dividend) >= Math.abs(divisor)) {
+                    if ((dividend < 0 && divisor > 0) || (dividend > 0 && divisor < 0)) {
+                        n--
+                    } else {
+                        n++
+                    }
+                    dividend = Math.abs(dividend) - Math.abs(divisor);
+                    fn(dividend, divisor)
+                }
+                return n
+            }
+            fn(dividend, divisor)
+            return n
+        }
+        var x = divide(-1, 1);
+        console.log(x);
+    </script>
+</body>
+
+</html>
